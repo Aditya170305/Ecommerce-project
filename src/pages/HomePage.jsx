@@ -12,7 +12,9 @@ export function HomePage() {
             .then((response) => {
                 // console.log(response.data);
                 setProduct(response.data);
-            })
+            });
+        
+        axios.get('http://localhost:3000/api/cart-items')
     } , []);
 
     return (
