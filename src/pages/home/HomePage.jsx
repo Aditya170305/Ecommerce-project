@@ -4,7 +4,7 @@ import { Header } from '../../components/Header.jsx'
 import { ProductGrid } from './ProductGrid.jsx';
 import './HomePage.css'
 
-export function HomePage( { cart } ) {
+export function HomePage( { cart , loadCart } ) {
 
     const [products , setProduct] = useState([]);
     
@@ -31,7 +31,7 @@ export function HomePage( { cart } ) {
             <Header cart = {cart} />
             <title>Ecommerce Project</title>
             <div className="home-page">
-                <ProductGrid products={ products } /> 
+                <ProductGrid products={ products } loadCart = {loadCart}/> 
             </div>
         </>
     )
